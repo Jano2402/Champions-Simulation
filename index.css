@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+table {
+    margin: 10px;
+    text-align: center;
+}
+.teams_container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+    margin: 0 25% 0 25%;
+}
+.group_stage_container {
+    display: grid;
+    justify-content: left;
+}
+.quarter_finals_container {
+    display: grid;
+    justify-content: left;
+}
+.semi_finals_container {
+    display: grid;
+    justify-content: left;
+}
+.final_phase_container {
+    display: grid;
+    justify-content: left;
+}
+.winner_container {
+    display: grid;
+    justify-content: left;
+}
+.final_container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 25% 0 25%;
+}

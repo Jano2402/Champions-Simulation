@@ -70,6 +70,7 @@ let teamG = [];
 let teamH = [];
 
 let teamsSelector = [teamA, teamB, teamC, teamD, teamE, teamF, teamG, teamH]
+let groupSelector = [GroupA, GroupB, GroupC, GroupD, GroupE, GroupF,GroupG, GroupH];
 
 // Parte lógica
 
@@ -114,16 +115,22 @@ for (let i = 0; i < 4; i++) {
 
 // Mostrar equipos en el HTML
 
-for (let k = 0; k < 4; k++){
-    GroupA[k].textContent = teamA[k]
-    GroupB[k].textContent = teamB[k]
-    GroupC[k].textContent = teamC[k]
-    GroupD[k].textContent = teamD[k]
-    GroupE[k].textContent = teamE[k]
-    GroupF[k].textContent = teamF[k]
-    GroupG[k].textContent = teamG[k]
-    GroupH[k].textContent = teamH[k]
+for (let r = 0; r < 8; r++) {
+    for (let q = 0; q < 4; q++) {
+        groupSelector[r][q].textContent = teamsSelector[r][q]
+    } 
 }
+
+// for (let k = 0; k < 4; k++){
+//     GroupA[k].textContent = teamA[k]
+//     GroupB[k].textContent = teamB[k]
+//     GroupC[k].textContent = teamC[k]
+//     GroupD[k].textContent = teamD[k]
+//     GroupE[k].textContent = teamE[k]
+//     GroupF[k].textContent = teamF[k]
+//     GroupG[k].textContent = teamG[k]
+//     GroupH[k].textContent = teamH[k]
+// }
 
 // Fase de grupos (Se repiten algunos equipos)
 

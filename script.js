@@ -203,23 +203,33 @@ for (let y = 0; y < 8; y++) {
     quarterTeams.push(selectedTeam)
 }
 
-quarterMatchs[0][0] = quarterTeams[0]
-quarterMatchs[0][1] = quarterTeams[1]
-quarterMatchs[1][0] = quarterTeams[2]
-quarterMatchs[1][1] = quarterTeams[3]
-quarterMatchs[2][0] = quarterTeams[4]
-quarterMatchs[2][1] = quarterTeams[5]
-quarterMatchs[3][0] = quarterTeams[6]
-quarterMatchs[3][1] = quarterTeams[7]
+// quarterMatchs[0][0] = quarterTeams[0]
+// quarterMatchs[0][1] = quarterTeams[1]
+// quarterMatchs[1][0] = quarterTeams[2]
+// quarterMatchs[1][1] = quarterTeams[3]
+// quarterMatchs[2][0] = quarterTeams[4]
+// quarterMatchs[2][1] = quarterTeams[5]
+// quarterMatchs[3][0] = quarterTeams[6]
+// quarterMatchs[3][1] = quarterTeams[7]
 
-quarterGroups[0][0].textContent = quarterMatchs[0][0]
-quarterGroups[0][1].textContent = quarterMatchs[0][1]
-quarterGroups[1][0].textContent = quarterMatchs[1][0]
-quarterGroups[1][1].textContent = quarterMatchs[1][1]
-quarterGroups[2][0].textContent = quarterMatchs[2][0]
-quarterGroups[2][1].textContent = quarterMatchs[2][1]
-quarterGroups[3][0].textContent = quarterMatchs[3][0]
-quarterGroups[3][1].textContent = quarterMatchs[3][1]
+for (let i=0; i < quarterMatchs.length; i++){
+    quarterMatchs[i][0] = quarterTeams[i*2]
+    quarterMatchs[i][1] = quarterTeams[i*2+1]
+}
+
+// quarterGroups[0][0].textContent = quarterMatchs[0][0]
+// quarterGroups[0][1].textContent = quarterMatchs[0][1]
+// quarterGroups[1][0].textContent = quarterMatchs[1][0]
+// quarterGroups[1][1].textContent = quarterMatchs[1][1]
+// quarterGroups[2][0].textContent = quarterMatchs[2][0]
+// quarterGroups[2][1].textContent = quarterMatchs[2][1]
+// quarterGroups[3][0].textContent = quarterMatchs[3][0]
+// quarterGroups[3][1].textContent = quarterMatchs[3][1]
+
+for (let i=0; i < quarterGroups.length; i++){
+    quarterGroups[i][0].textContent = quarterMatchs[i][0]
+    quarterGroups[i][1].textContent = quarterMatchs[i][1]
+}
 
 for (let z = 0; z < 4; z++) {
     let winning = Math.floor(Math.random() * 2)
@@ -227,15 +237,25 @@ for (let z = 0; z < 4; z++) {
     semiFinalTeams.push(selectedTeam)
 }
 
-semiFinalMatchs[0][0] = semiFinalTeams[0]
-semiFinalMatchs[0][1] = semiFinalTeams[1]
-semiFinalMatchs[1][0] = semiFinalTeams[2]
-semiFinalMatchs[1][1] = semiFinalTeams[3]
+for (let i = 0; i < 2; i++) {
+    semiFinalMatchs[i][0] = semiFinalTeams[i*2]
+    semiFinalMatchs[i][1] = semiFinalTeams[i*2+1]
+}
 
-semiFinalGroups[0][0].textContent = semiFinalMatchs[0][0]
-semiFinalGroups[0][1].textContent = semiFinalMatchs[0][1]
-semiFinalGroups[1][0].textContent = semiFinalMatchs[1][0]
-semiFinalGroups[1][1].textContent = semiFinalMatchs[1][1]
+// semiFinalMatchs[0][0] = semiFinalTeams[0]
+// semiFinalMatchs[0][1] = semiFinalTeams[1]
+// semiFinalMatchs[1][0] = semiFinalTeams[2]
+// semiFinalMatchs[1][1] = semiFinalTeams[3]
+
+for (let i = 0; i < 2; i++) {
+    semiFinalGroups[i][0].textContent = semiFinalMatchs[i][0] 
+    semiFinalGroups[i][1].textContent = semiFinalMatchs[i][1] 
+}
+
+// semiFinalGroups[0][1].textContent = semiFinalMatchs[0][1]
+// semiFinalGroups[1][0].textContent = semiFinalMatchs[1][0]
+// semiFinalGroups[1][1].textContent = semiFinalMatchs[1][1]
+// semiFinalGroups[0][0].textContent = semiFinalMatchs[0][0]
 
 for (let x = 0; x < 2; x++) {
     let winning = Math.floor(Math.random() * 2)

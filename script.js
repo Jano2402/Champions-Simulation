@@ -1,3 +1,5 @@
+// Música de fondo de la web
+
 document.addEventListener('DOMContentLoaded', () => {
     let audio = new Audio('./song.mp3')
     audio.play()

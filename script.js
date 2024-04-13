@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+    let audio = new Audio('./song.mp3')
+    audio.play()
+})
+
 // Traer los elementos del HTML
 
 let GroupA = document.querySelectorAll('.GroupA');
@@ -76,8 +81,9 @@ let groupSelector = [GroupA, GroupB, GroupC, GroupD, GroupE, GroupF,GroupG, Grou
 
 // Armar los grupos
 
+const teamsCopy = [...teams];
+
 for (let i = 0; i < 4; i++) {
-    const teamsCopy = [...teams];
 
     for (let j = 0; j < 8; j++) {
         let randomNumber = Math.floor(Math.random() * teamsCopy.length);
@@ -120,17 +126,6 @@ for (let r = 0; r < 8; r++) {
         groupSelector[r][q].textContent = teamsSelector[r][q]
     } 
 }
-
-// for (let k = 0; k < 4; k++){
-//     GroupA[k].textContent = teamA[k]
-//     GroupB[k].textContent = teamB[k]
-//     GroupC[k].textContent = teamC[k]
-//     GroupD[k].textContent = teamD[k]
-//     GroupE[k].textContent = teamE[k]
-//     GroupF[k].textContent = teamF[k]
-//     GroupG[k].textContent = teamG[k]
-//     GroupH[k].textContent = teamH[k]
-// }
 
 // Fase de grupos (Se repiten algunos equipos)
 
@@ -203,28 +198,10 @@ for (let y = 0; y < 8; y++) {
     quarterTeams.push(selectedTeam)
 }
 
-// quarterMatchs[0][0] = quarterTeams[0]
-// quarterMatchs[0][1] = quarterTeams[1]
-// quarterMatchs[1][0] = quarterTeams[2]
-// quarterMatchs[1][1] = quarterTeams[3]
-// quarterMatchs[2][0] = quarterTeams[4]
-// quarterMatchs[2][1] = quarterTeams[5]
-// quarterMatchs[3][0] = quarterTeams[6]
-// quarterMatchs[3][1] = quarterTeams[7]
-
 for (let i=0; i < quarterMatchs.length; i++){
     quarterMatchs[i][0] = quarterTeams[i*2]
     quarterMatchs[i][1] = quarterTeams[i*2+1]
 }
-
-// quarterGroups[0][0].textContent = quarterMatchs[0][0]
-// quarterGroups[0][1].textContent = quarterMatchs[0][1]
-// quarterGroups[1][0].textContent = quarterMatchs[1][0]
-// quarterGroups[1][1].textContent = quarterMatchs[1][1]
-// quarterGroups[2][0].textContent = quarterMatchs[2][0]
-// quarterGroups[2][1].textContent = quarterMatchs[2][1]
-// quarterGroups[3][0].textContent = quarterMatchs[3][0]
-// quarterGroups[3][1].textContent = quarterMatchs[3][1]
 
 for (let i=0; i < quarterGroups.length; i++){
     quarterGroups[i][0].textContent = quarterMatchs[i][0]
@@ -242,20 +219,10 @@ for (let i = 0; i < 2; i++) {
     semiFinalMatchs[i][1] = semiFinalTeams[i*2+1]
 }
 
-// semiFinalMatchs[0][0] = semiFinalTeams[0]
-// semiFinalMatchs[0][1] = semiFinalTeams[1]
-// semiFinalMatchs[1][0] = semiFinalTeams[2]
-// semiFinalMatchs[1][1] = semiFinalTeams[3]
-
 for (let i = 0; i < 2; i++) {
     semiFinalGroups[i][0].textContent = semiFinalMatchs[i][0] 
     semiFinalGroups[i][1].textContent = semiFinalMatchs[i][1] 
 }
-
-// semiFinalGroups[0][1].textContent = semiFinalMatchs[0][1]
-// semiFinalGroups[1][0].textContent = semiFinalMatchs[1][0]
-// semiFinalGroups[1][1].textContent = semiFinalMatchs[1][1]
-// semiFinalGroups[0][0].textContent = semiFinalMatchs[0][0]
 
 for (let x = 0; x < 2; x++) {
     let winning = Math.floor(Math.random() * 2)
